@@ -16,7 +16,11 @@ git --version
 
 ## 2. Make the folders
 
-Make these if they aren't there: `my-stuff/`, `mockups/`, `site/`, `site/images/`.
+Run this exactly. It works in any shell and won't raise a yes/no box:
+
+```
+node -e "for (const d of ['my-stuff','mockups','site/images']) require('fs').mkdirSync(d,{recursive:true})"
+```
 
 ## 3. Start the preview
 
