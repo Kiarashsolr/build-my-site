@@ -33,7 +33,7 @@ For each one, run `node scripts/shot.mjs mockups/a.html --top` (then b, c) and r
 
 Run `node scripts/open.mjs http://localhost:4321/mockups/a.html`. It has a switcher at the bottom left, added by the preview. Then:
 
-> I made three looks, and they are open in your browser. You can switch between them with the A, B and C buttons at the bottom. I would pick [one], because [one reason]. Which one do you like, or would you like something else?
+> I made three looks, and they're open in your browser. You can switch between them with the A, B and C buttons at the bottom. I'd pick [one], because [one reason]. Which one do you like, or would you like something else?
 
 In your next message, once only:
 

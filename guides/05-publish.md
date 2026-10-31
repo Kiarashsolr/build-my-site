@@ -18,7 +18,7 @@ Don't start unless `node scripts/check.mjs --final` shows 0 FAIL.
 
 If `progress.md` already says `Student said yes to publishing`, skip this. Otherwise say:
 
-> Next, we will put your site on the real internet, at a web address you choose. Anyone will be able to see it. Do you want to do that?
+> Next, we'll put your site on the real internet, at a web address you choose. Anyone will be able to see it. Do you want to do that?
 
 Go on only after a clear yes. "Looks good" or "no changes" isn't a yes. After a yes, write `Student said yes to publishing` under Notes in `progress.md`.
 
@@ -69,7 +69,7 @@ The first run usually stops with NEEDS PERMISSION. It can be slow, so say "This 
 
 If it needs permission, tell them what happened, because this is the lesson:
 
-> The key works, but it is not allowed to publish yet. This happens all the time in the cloud. It is your project, so only you can give it permission, and it will only take a few clicks.
+> The key works, but it isn't allowed to publish yet. This happens all the time in the cloud. It's your project, so only you can give it permission, and it'll only take a few clicks.
 
 ## 5. Give the key permission (they click)
 
@@ -92,7 +92,7 @@ node scripts/check-live.mjs https://<project-id>.web.app
 
 If it says FAIL, fix the file names, run the check, and publish again. Then open it for them: `node scripts/open.mjs https://<project-id>.web.app`. Write the address in `progress.md`.
 
-> Your site is live at https://<project-id>.web.app. It is on the real internet, and anyone with the address can see it. Please try it on your phone. Would you like to change anything?
+> Your site is live at https://<project-id>.web.app. It's on the real internet, and anyone with the address can see it. Please try it on your phone. Would you like to change anything?
 
 If they change anything, run `node scripts/check.mjs --final`, then `node scripts/deploy.mjs`. The address stays the same. Never suggest buying a domain; that's for an adult to decide.
 

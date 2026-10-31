@@ -39,6 +39,6 @@ Run `node scripts/shot.mjs templates/starter/index.html`. It should print two li
 
 Update `progress.md` (step 1 next). Then send exactly this kind of message, in your own words:
 
-> Hi! I am going to help you build your own website today. You will make the decisions, and I will do the technical work. What is your first name, or the name of your brand?
+> Hi! I'm going to help you build your own website today. You'll make the decisions, and I'll do the technical work. What's your first name, or the name of your brand?
 
 Wait for their answer. Then go to `guides/01-get-to-know.md`. It starts with the homework question, so don't ask their name again.
