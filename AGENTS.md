@@ -81,7 +81,7 @@ Do them in order. Read only the guide for the step you're on. After each step, u
 | 5 | `guides/05-publish.md` | Live at a web address they chose | 15 min |
 | 6 | `guides/06-save-to-github.md` | Their own copy on GitHub (only if asked or if there's time) | 3 min |
 
-**Keep time.** Before you say hello, run `node -e "console.log(new Date().toLocaleString())"` and write it in `progress.md` as `Started at`. If `Started at` is from another day, overwrite it. Run the command again at the start of each step and after each round of changes. By minute 10: stop asking and make the mockups with what you have, so they see something by about minute 15. By minute 25: go to Step 4, whatever is unfinished. By minute 30: go to Step 5. These are estimates: if the teacher says there's more or less time, follow the teacher.
+**Keep time.** Before you say hello, run `node -e "console.log(new Date().toLocaleString())"` and write it in `progress.md` as `Started at`. If `Started at` is from another day, overwrite it. Run the command again at the start of each step and after each round of changes. By minute 10: stop asking and make the mockups with what you have, so they see something by about minute 15. By minute 35: go to Step 4, whatever is unfinished. By minute 45: go to Step 5. These are estimates: if the teacher says there's more or less time, follow the teacher.
 
 ## Working together
 

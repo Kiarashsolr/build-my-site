@@ -33,7 +33,7 @@ Check it: `node -e "fetch('http://127.0.0.1:4321/').then(r=>console.log(r.status
 
 ## 4. Test the screenshots
 
-Run `node scripts/shot.mjs templates/starter/index.html`. It should print two lines starting with `ok`. If it says NO BROWSER FOUND, say "Please call your teacher over, I need Chrome on this laptop."
+Run `node scripts/shot.mjs templates/starter/index.html`. It should print two lines starting with `ok`. It only tests that screenshots work. If it says NO BROWSER FOUND, say "Please call your teacher over, I need Chrome on this laptop."
 
 ## 5. Say hello
 
