@@ -4,6 +4,8 @@ Instructions that help an AI coding agent guide a beginner through building a on
 
 You make the decisions. The agent does the technical work, drafts the words, and checks its own mistakes.
 
+**Do you have an iPad or a school device, and can't open the black window? [Please go to this page instead.](no-laptop/README.md)**
+
 ## Start here (Windows)
 
 Press the Windows key, type `cmd`, and press Enter. Copy each box with its copy button, then right-click in the black window to paste, and press Enter. If it asks you to agree, type `Y`. If Windows asks to allow changes, click Yes.
