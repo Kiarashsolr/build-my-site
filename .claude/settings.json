@@ -53,5 +53,18 @@
       "PowerShell(git push --force*)",
       "PowerShell(Remove-Item *-Recurse*)"
     ]
-  }
+  },
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node -e \"console.log('Reminder: write every sentence in full, with all its small words. Say fewer things instead of using fewer words.')\""
+          }
+        ]
+      }
+    ]
+  },
+  "outputStyle": "Talk to students"
 }

@@ -73,7 +73,8 @@ It'll ask you to restart it once, so its class settings switch on. Then answer i
 | `scripts/clean-images.mjs` | Removes hidden data from pictures, such as where a photo was taken |
 | `scripts/read-pptx.mjs` | Reads a PowerPoint style guide |
 | `scripts/deploy.mjs`, `check-live.mjs` | Publish with your Firebase key, test the published site |
-| `scripts/look.mjs`, `open.mjs`, `shrink.mjs` | Take a picture of a website you like, open a page, shrink a big image |
+| `scripts/look.mjs` | Opens a website you like and saves its code, so your agent can see how it's built |
+| `scripts/open.mjs`, `shrink.mjs` | Open a page, shrink a big image |
 | `TEACHER.md`, `teacher/` | Notes for the teacher, and a backup setup |
 
 Needs Node 20 or newer and Chrome or Edge. The scripts have no dependencies.

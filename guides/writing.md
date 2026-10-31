@@ -5,7 +5,7 @@ The site has to sound like this one teenager. AI text is usually easy to spot: p
 ## The method
 
 1. **Start from their words.** Open "In their words" in `brand.md`. Use their phrases, their word choices, how long their sentences are.
-2. **Write short.** Most sentences under 12 words. Use plain words a 14-year-old uses.
+2. **Write simple, complete sentences.** Use plain words a 14-year-old uses, and keep the sentences short enough to say in one breath. Every sentence you write needs a subject and a full verb, with the small words left in (will, is, the, a). "I want to sell my drinks at a fair" is right, and "A plan to sell at a fair" isn't. A short fragment is fine only when it's what they really said.
 3. **Be specific.** Every sentence needs a detail that wouldn't fit anyone else. If you don't have the detail, ask them for it or delete the sentence.
 4. **First person.** "I make..." not "Sam offers..." or "We provide...". Use "we" only if there's truly a team.
 5. **Only true things.** If it didn't come from `brand.md`, don't write it.
@@ -31,7 +31,7 @@ These are from made-up students.
 
 **A business that's only an idea**
 - ❌ "We deliver premium bike repair services to satisfied customers across the community."
-- ✅ "I fix bikes. So far: mine and my cousin's. I want to fix 10 more by summer."
+- ✅ "I fix bikes. So far I've fixed mine and my cousin's, and I want to fix 10 more by summer."
 
 **When they gave you almost nothing.** They said only: "i like drawing cars."
 - ❌ "A lifelong love of automotive design drives my artistic vision."
@@ -53,6 +53,7 @@ These are from made-up students.
 - **Em dashes.** Use a period or a comma.
 - **Ending every section with an uplifting line.** Stop when you've said it.
 - **Slogans made of two parallel fragments.** "Real flavour. Real people." "Real beats, real words." Don't write them. Use one if the student says it first.
+- **Clipped fragments that nobody would say out loud,** like "Nothing's sold yet," "More bars. Keep going," or "First song. Made in my room." Write it as a person would say it: "I haven't sold any yet."
 - **Clever rhymes and puns,** unless they came up with it.
 - **Exclamation marks everywhere.** Two at most on the page, unless they really talk like that.
 - **Filler endings.** "Check back soon," "stay tuned," "more to come." Say what's next or stop.

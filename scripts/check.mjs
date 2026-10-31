@@ -253,6 +253,7 @@ function checkSources() {
     if (!a) continue;
     if (!b || !brand.includes(b)) { bad++; fail(`words-check.md: "${raw.slice(0, 70)}" isn't in "In their words" in brand.md. Use their exact words, or show them the sentence and ask if it's true`); }
   }
+  for (const s of sentences) if (s.split(/\s+/).length <= 3 && !brand.includes(norm(s))) warn(`"${s}" is clipped, and it isn't their exact words. Write a complete sentence the way a person would say it`);
   if (!bad) ok(`all ${sentences.length} sentences trace back to what the student said`);
 }
 

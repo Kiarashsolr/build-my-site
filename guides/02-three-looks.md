@@ -33,11 +33,11 @@ For each one, run `node scripts/shot.mjs mockups/a.html --top` (then b, c) and r
 
 Run `node scripts/open.mjs http://localhost:4321/mockups/a.html`. It has a switcher at the bottom left, added by the preview. Then:
 
-> Three looks are in your browser: use the A, B, C buttons at the bottom. I'd pick [one], because [one reason]. Which do you like, or do you want something else?
+> I made three looks, and they are open in your browser. You can switch between them with the A, B and C buttons at the bottom. I would pick [one], because [one reason]. Which one do you like, or would you like something else?
 
 In your next message, once only:
 
-> The Comment button lets you click any part and say what you think. Or just tell me here.
+> You can also click the Comment button, click any part of the page, and tell me what you think. Or you can just tell me here.
 
 ## 4. Use what they say
 
@@ -48,7 +48,7 @@ In your next message, once only:
 - If they hate all three, ask "What's the worst thing about them?" and make one new one. Show websites from their screenshots in `my-stuff/` as a guide if they have any.
 - Don't do more than 2 rounds. After that, recommend one and move on: "Let's go with this and improve it as we go."
 
-Go back to the websites they liked. Pick one specific thing from them (a layout, a font feeling, a moving effect) and use it in a mockup. Say which: "I took the big-letter header from the site you liked."
+Go back to the code of the websites they liked, in `my-stuff/websites/`. Pick one specific thing they liked (a layout, a font, a moving effect), find how it's done in the code, and write your own version of it in a mockup. Never copy their words, pictures or logo. Tell them which thing you took: "I used the big-letter header from the site you liked."
 
 ## 5. Finish
 

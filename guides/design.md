@@ -114,4 +114,4 @@ AI logos are often detailed, with a background box and small text.
 
 ## Using websites they liked
 
-If `my-stuff/` has screenshots, look at them. Name what you're borrowing: the big type, the layout, the way images overlap. Take one idea. Never copy a site's text, images, or logo.
+Their sites' real code is in `my-stuff/websites/`. Find out how the thing they liked is done, and write your own version of it. Name what you're borrowing: the big type, the layout, the way images overlap. Take one idea. Never copy a site's text, images, or logo.

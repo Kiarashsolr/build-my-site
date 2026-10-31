@@ -6,7 +6,7 @@
 
 Ask for their stuff before you ask any questions:
 
-> Did you bring your homework? Your style guide, logo, pictures, and the websites you liked? It's fine if not.
+> Did you bring your homework, like your style guide, your logo, your pictures and the websites you liked? It's fine if you didn't.
 
 If yes, open the folder for them (`node scripts/open.mjs my-stuff`) and say:
 
@@ -18,9 +18,18 @@ They may have: a style guide (PowerPoint or PDF), logo images, 3 pictures, scree
 
 **Then ask for their websites:**
 
-> Which websites did you like? Paste the addresses here, and tell me what you liked about each one.
+> Which websites did you like? Please paste the addresses here, and tell me what you liked about each one.
 
-Run `node scripts/look.mjs <address>` for each one, up to 5, and read the pictures. Write in `brand.md` what you saw and what they liked, and use it in Step 2. Say one specific thing back: "I like how big the letters are on that second one."
+Run `node scripts/look.mjs <address>` for each one, up to 5. It opens the site, saves its real code in `my-stuff/websites/`, and tells you its fonts, colours and effects. If the address is a page on One Page Love, Awwwards or SiteInspire, that's only a gallery, so also look at the real site it shows. Search the code for the thing they liked, so you know how it's done. Write in `brand.md` what you found and what they liked, and use it in Step 2. Then tell them one specific thing you found: "The big letters on that second site use one huge font size, and I can do the same thing with your name."
+
+**Teach them Inspect, once.** This is how anyone can see how a website is built, and it also works when a site blocks the script. If you are past minute 10, skip it unless the script was blocked. Ask them which part of a site they like the most, then guide them one step per message:
+
+1. First make the file: `node -e "require('fs').mkdirSync('my-stuff/websites',{recursive:true});require('fs').writeFileSync('my-stuff/websites/from-inspect.txt','')"`, then run `node scripts/open.mjs my-stuff/websites/from-inspect.txt`. Say: "I opened a blank file for you. Leave it open, and go back to the website."
+2. "Right-click the part you like, and click **Inspect**. A panel will open with the code of that part, and one line will be highlighted."
+3. "Right-click the highlighted line, then click **Copy**, then **Copy element**."
+4. "Click in the blank file, press Ctrl+V to paste, and press Ctrl+S to save. Tell me when you have done that."
+
+Read `my-stuff/websites/from-inspect.txt` and tell them what it shows in one or two plain sentences: "This part is a big box with a slow fade, and that is why it feels smooth." If you also need the styling, ask them to look at the **Styles** part of the same panel, select the rules there, and paste those too. They can see a whole page's code with Ctrl+U.
 
 Nothing brought? No problem, and no comment on it. Everything below works from zero, and you make the logo decision later.
 

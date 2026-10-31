@@ -77,6 +77,10 @@ Also log out of GitHub if they used it: `gh auth logout --hostname github.com`. 
 - **To take a site down:** the student signs in at console.firebase.google.com, opens the project, then Hosting, and chooses Disable site from the menu on their site's row. A family can do the same. Or, logged in with that account in your own terminal: `npx -y firebase-tools@latest hosting:disable --project <project-id> --force`.
 - **Their key is a password to their project.** It's in `secrets/` and git ignores it. If it ever leaks, they delete it in Project settings, Service accounts.
 
+## If the agent starts writing in clipped sentences
+
+Stronger AI models tend to drop small words, as in "Fixed two things" or "Key refused." That makes a message harder to read, especially for a slow reader. This repo fights it in four places: the first section of `AGENTS.md`, the output style in `.claude/output-styles/`, a reminder that a hook adds to every turn in `.claude/settings.json`, and a warning in `scripts/check.mjs` for clipped lines on the site. If you see it in class, tell the agent: "Please write that again in complete sentences, with all the small words."
+
 ## Changing the rules
 
 - Writing style: `guides/writing.md`, `scripts/banned-words.txt`

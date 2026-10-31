@@ -64,7 +64,7 @@ node scripts/shot.mjs
 
 Fix every FAIL. Read every screenshot. Then open it for them: `node scripts/open.mjs http://localhost:4321/site/`.
 
-> Your site is up on your screen. Scroll down it, and tell me or use the Comment button for anything you'd change.
+> Your site is now open in your browser. Please scroll down it, and tell me anything you would like to change. You can also use the Comment button.
 
 Pitch one idea now that would make it more theirs, based on something they told you: "You said your little brother dances when the beat drops. Want that as the first line?"
 
