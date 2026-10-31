@@ -4,9 +4,53 @@ Instructions that help an AI coding agent guide a beginner through building a on
 
 You make the decisions. The agent does the technical work, drafts the words, and checks its own mistakes.
 
-## How to use it
+## Start here (Windows)
 
-Open your AI agent in an empty folder. Click the copy button on this box, paste it into the agent, and press Enter:
+Press the Windows key, type `cmd`, and press Enter. Copy each box with its copy button, then right-click in the black window to paste, and press Enter. If it asks you to agree, type `Y`. If Windows asks to allow changes, click Yes.
+
+**1. Git**
+
+```
+winget install -e --id Git.Git
+```
+
+**2. Node**
+
+```
+winget install -e --id OpenJS.NodeJS.LTS
+```
+
+**3. Claude Code**
+
+```
+curl -fsSL https://claude.ai/install.cmd -o install.cmd && install.cmd && del install.cmd
+```
+
+**4. Close the black window and open a new one.** Then make a folder and start your agent in it, one line at a time:
+
+```
+mkdir my-site
+```
+
+```
+cd my-site
+```
+
+```
+claude --model sonnet --effort medium
+```
+
+If `claude` isn't recognized:
+
+```
+%USERPROFILE%\.local\bin\claude --model sonnet --effort medium
+```
+
+**5. Put your hand up** so your teacher can log you in.
+
+## Give it the instructions
+
+Click the copy button on this box, paste it into your agent, and press Enter:
 
 ```
 Run this here: git clone https://github.com/Kiarashsolr/build-my-site .
