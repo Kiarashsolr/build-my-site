@@ -5,8 +5,7 @@ Agent: update this after every step, so the work can continue if the session res
 - Next step: 0
 - Started at:
 - Firebase project ID:
-- Preview link:
-- Parent said yes to public: no
+- Live address:
 - Parent OK'd email on the site: no
 - Parent OK'd links on the site: no
 - What I saw in the last screenshots:

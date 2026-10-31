@@ -216,6 +216,9 @@ if (!/@media[^{]*(?:max|min)-width/i.test(fullCss) && !/\bclamp\(|\bminmax\(|\bf
 
 if (/(?:min-)?height\s*:\s*\d+[sdl]?vh/i.test(fullCss.replace(/(?:^|[}\s])(?:html|body)\s*\{[^}]*\}/gi, " "))) warn("a height in plain vh makes a huge empty area on tall screens. Use min(90vh, 640px) instead");
 
+// ---------- the Firebase key must never go online
+for (const f of files.filter((x) => /\.json$/i.test(x))) if (/"private_key"/.test(readFileSync(f, "utf8"))) fail(`${f.slice(dir.length + 1)} looks like a private key. It's in the folder that goes online. Move it to secrets/ now`);
+
 // ---------- file sizes
 for (const f of files) {
   const base = f.split(/[\\/]/).pop();

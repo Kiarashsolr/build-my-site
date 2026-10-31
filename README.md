@@ -13,7 +13,7 @@ Run this here: git clone https://github.com/Kiarashsolr/build-my-site .
 Then read AGENTS.md and follow it step by step. Talk to me the way it says.
 ```
 
-Then answer its questions. You can bring your style guide, logo, pictures and any websites you liked, but you don't have to.
+Then answer its questions. Bring your style guide, logo, pictures, the addresses of websites you like, and a few real things about you. The more you bring, the more it's yours.
 
 ## What's in here
 
@@ -28,8 +28,9 @@ Then answer its questions. You can bring your style guide, logo, pictures and an
 | `scripts/serve.mjs` | Local preview, with a button for leaving comments on any part of the page |
 | `scripts/clean-images.mjs` | Removes hidden data from pictures, such as where a photo was taken |
 | `scripts/read-pptx.mjs` | Reads a PowerPoint style guide |
-| `scripts/check-live.mjs`, `open.mjs`, `shrink.mjs` | Test the published site, open a page, shrink a big image |
-| `teacher/`, `TEACHER.md` | Setup and clean-up for the teacher |
+| `scripts/deploy.mjs`, `check-live.mjs` | Publish with your Firebase key, test the published site |
+| `scripts/look.mjs`, `open.mjs`, `shrink.mjs` | Take a picture of a website you like, open a page, shrink a big image |
+| `TEACHER.md`, `teacher/` | Notes for the teacher, and a backup setup |
 
 Needs Node 20 or newer and Chrome or Edge. The scripts have no dependencies.
 

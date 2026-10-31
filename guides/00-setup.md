@@ -11,8 +11,7 @@ node --version
 git --version
 ```
 
-- Node must be version 20 or newer. If it's missing or older: on Windows run `winget install -e --id OpenJS.NodeJS.LTS`; on Mac, say "Please call your teacher over, this laptop needs Node installed." After installing on Windows, the terminal may need restarting: if `node` still isn't found, say "Please call your teacher over."
-- Git: if missing, Windows: `winget install -e --id Git.Git`. Otherwise ask for the teacher.
+- They installed these themselves in CMD before starting you. Node must be version 20 or newer. If it's missing or older, say: "Node is missing. Please call your teacher over." The teacher has a backup in `TEACHER.md`.
 
 ## 2. Make the folders
 

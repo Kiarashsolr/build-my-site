@@ -6,15 +6,21 @@
 
 Ask for their stuff before you ask any questions:
 
-> Did you bring anything from the class? Your style guide, logo, pictures, websites you liked? It's fine if not.
+> Did you bring your homework? Your style guide, logo, pictures, and the websites you liked? It's fine if not.
 
 If yes, open the folder for them (`node scripts/open.mjs my-stuff`) and say:
 
 > I opened a folder called my-stuff. Drag your files in (just the ones for your brand), then tell me when you're done.
 
-They may have: a style guide (PowerPoint or PDF), logo images, 3 pictures, screenshots of websites, a list of words, a typed answer. Files on WhatsApp or Google Drive: ask them to download and drag them in. If it's hard, they can paste text into this chat.
+They may have: a style guide (PowerPoint or PDF), logo images, 3 pictures, screenshots of websites, a list of words, a typed answer about themselves. Files on WhatsApp or Google Drive: ask them to download and drag them in. If it's hard, they can paste text into this chat.
 
 **Read everything in `my-stuff/`.** Look at every image. For a `.pptx`, run `node scripts/read-pptx.mjs "my-stuff/<file name>.pptx"`. It prints the text, colours and fonts, and saves the pictures, including any logo. Look at those too. If it can't read the file, ask them for a screenshot. Write what you found into `brand.md` before you ask anything.
+
+**Then ask for their websites:**
+
+> Which websites did you like? Paste the addresses here, and tell me what you liked about each one.
+
+Run `node scripts/look.mjs <address>` for each one, up to 5, and read the pictures. Write in `brand.md` what you saw and what they liked, and use it in Step 2. Say one specific thing back: "I like how big the letters are on that second one."
 
 Nothing brought? No problem, and no comment on it. Everything below works from zero, and you make the logo decision later.
 

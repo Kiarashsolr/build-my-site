@@ -38,11 +38,6 @@
       "Glob",
       "Grep"
     ],
-    "ask": [
-      "Bash(npx -y firebase-tools@latest deploy *)",
-      "PowerShell(npx -y firebase-tools@latest deploy *)",
-      "PowerShell(npx.cmd -y firebase-tools@latest deploy *)"
-    ],
     "deny": [
       "Artifact",
       "Agent",
@@ -61,7 +56,9 @@
       "Bash(rm -fr*)",
       "Bash(git push --force*)",
       "PowerShell(git push --force*)",
-      "PowerShell(Remove-Item *-Recurse*)"
+      "PowerShell(Remove-Item *-Recurse*)",
+      "Read(secrets/**)",
+      "Read(**/*adminsdk*.json)"
     ]
   }
 }

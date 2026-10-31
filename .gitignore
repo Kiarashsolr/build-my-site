@@ -1,4 +1,7 @@
 my-stuff/
+secrets/
+*adminsdk*.json
+words-check.md
 mockups/
 .shots/
 .feedback/

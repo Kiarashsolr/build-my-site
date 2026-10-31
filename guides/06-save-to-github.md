@@ -22,7 +22,7 @@ git commit -m "My website"
 gh repo create <brand-name>-site --private --source=. --remote=origin --push
 ```
 
-Before committing, read `brand.md` and `progress.md` once more for anything private. `my-stuff/`, `.feedback/` and `.shots/` are ignored on purpose, because `my-stuff/` can contain pictures that belong to other people.
+Before committing, read `brand.md` and `progress.md` once more for anything private. `secrets/`, `my-stuff/`, `.feedback/` and `.shots/` are ignored on purpose: `secrets/` holds their key, and `my-stuff/` can contain pictures that belong to other people.
 
 **Keep it private.** Don't make it public unless the teacher says so.
 

@@ -48,7 +48,7 @@ In your next message, once only:
 - If they hate all three, ask "What's the worst thing about them?" and make one new one. Show websites from their screenshots in `my-stuff/` as a guide if they have any.
 - Don't do more than 2 rounds. After that, recommend one and move on: "Let's go with this and improve it as we go."
 
-If they brought screenshots of websites they like, look at them now. Pick one specific thing from them (a layout, a font feeling, a moving effect) and use it in a mockup. Say which: "I took the big-letter header from the site you liked."
+Go back to the websites they liked. Pick one specific thing from them (a layout, a font feeling, a moving effect) and use it in a mockup. Say which: "I took the big-letter header from the site you liked."
 
 ## 5. Finish
 

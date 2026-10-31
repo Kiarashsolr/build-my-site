@@ -1,139 +1,103 @@
-# Step 5: Publish (5 minutes)
+# Step 5: Put it online, together (15 minutes)
 
-**Goal:** they get a link. By default it's a **preview link**: it works for anyone who has it, isn't listed anywhere, and stops working after 30 days.
+**Goal:** the site is live at `https://<name>.web.app`, a name they chose.
+
+**This step is done together, on purpose.** They click in the Firebase console, and you tell them where. They should feel what it's like to work with an agent: you can do a lot, but some things only the owner can do. Don't try to do these parts for them.
+
+How to guide them:
+
+- **One step per message.** Say what to click, in plain words. End with "Tell me when that's done."
+- **Say why, once, in one short line,** before each new part.
+- **Firebase's pages change.** If what they see doesn't match, ask "What do you see on the screen?" or have them drag a screenshot into `my-stuff/`, then look at it. Go by their screen, not by this guide.
+- **Never ask for a password.** They sign in on the Google page, not here.
+- Stuck on the same thing twice: "Please call your teacher over."
 
 Don't start unless `node scripts/check.mjs --final` shows 0 FAIL.
-
-In these commands, `FB` means `npx -y firebase-tools@latest`. Using npx means nothing needs installing globally. It can be slow, so say "This takes a minute." Run each FB command on its own. If a result says it moved to the background, wait for it to finish, and never run it again while it's still going.
 
 ## 0. Ask first
 
 If `progress.md` already says `Student said yes to publishing`, skip this. Otherwise say:
 
-> Next I can put your site online. Anyone with the link can see it, and it stops working after 30 days. Do you want that?
+> Next we put your site on the real internet, at a web address you choose. Anyone can see it. Do you want that?
 
 Go on only after a clear yes. "Looks good" or "no changes" isn't a yes. After a yes, write `Student said yes to publishing` under Notes in `progress.md`.
 
-If they say no or aren't sure, say "That's fine, your site is safe on this laptop." Write `Student said no to publishing` under Notes, and stop here. Don't ask again unless they bring it up.
+If they say no, aren't sure, or say their family doesn't want it online, say "That's fine, your site is safe on this laptop, and it counts just the same." Write `Student said no to publishing` under Notes, and stop here. Don't ask again unless they bring it up.
 
-## 1. Log in (the teacher does this part)
+## 1. Choose the name
 
-Check first:
+Do this in the chat first. Say:
 
-```
-FB login:list
-```
+> Your address will be name.web.app, and you can't change it later. Let's pick the name. How about [3 options from their brand]? Or say your own.
 
-If it shows an account, skip to step 2. If not:
+Rules: lowercase letters, numbers and hyphens, 6 to 30 characters, starting with a letter. **No last name, school, age or city.** Keep what they choose in `progress.md` under Notes.
 
-```
-FB login --no-localhost
-```
+## 2. Make the project (they click)
 
-From a tool like yours, this doesn't wait. It prints a long `https://auth.firebase.tools/...` address and a short session ID, then stops. It may also print an "Assertion failed" line as it exits. Ignore that line. Open the address yourself: `node scripts/open.mjs --private "<address>"`. Show the session ID and the address in the chat exactly as printed (one of the few times you show something technical), and say:
+Run `node scripts/open.mjs https://console.firebase.google.com`. Then, one message at a time:
 
-> This part needs your teacher. Please call them over.
+1. "A Firebase page opened. Sign in with your Google account. If you don't have one you can use, call your teacher over."
+2. "Click **Create a project**. It might say Get started or Add project."
+3. "Type your name: [name]. Look just under the box: it shows the real address name. If Firebase added extra letters or numbers, someone already has that name. Tell me exactly what it shows." If it changed, offer to try another name, or use the pencil beside it to edit it. Write the final project ID in `progress.md`.
+4. "Tick the boxes to accept the terms, and click Continue."
+5. "If it asks about Gemini or Google Analytics, turn them off, and keep clicking Continue, then **Create project**. It takes about a minute." We don't want tracking on the site.
+6. "Tell me when it says your project is ready, and click Continue."
 
-The teacher signs in, in that private window, and the page gives them a code. They paste it here. Then run:
+## 3. Get the key (they click)
 
-```
-FB login <the code>
-```
+Say:
 
-Run `FB login:list` to confirm.
+> To publish from here, I need a key to your project. It's like a password for it. It goes in a secret folder, never on your site, and I never open it.
 
-If that fails, the address and code are both used up. Run `FB login --no-localhost` again for a new pair, and try once more. If it fails again, write the error under Stuck on in `progress.md`, and tell the teacher: "Please open a new PowerShell window and run `npx.cmd -y firebase-tools@latest login --no-localhost`, then open the address it prints in a private window." Never use plain `FB login`: it opens the student's normal browser. Don't ask for or touch any password. The code isn't a password, but never write it in a file.
+1. "Click the gear next to **Project Overview**, at the top left, then **Project settings**."
+2. "Click the **Service accounts** tab."
+3. "Click **Generate new private key**, then **Generate key**. A file downloads. Don't send it to anyone."
 
-## 2. Make a project
+Run `node scripts/open.mjs secrets`, then:
 
-Check `progress.md`. If a project ID is there, don't make a new one: run `FB projects:list`. If it's listed, skip to step 3. If not, run `FB projects:create <that ID>`. If that says it already exists, run `FB projects:addfirebase <that ID>`.
+> I opened a folder called secrets. Drag that file into it from your Downloads. Tell me when you're done.
 
-Make a project ID: the brand name, lowercase, hyphens only, with 5 random digits at the end, up to 30 characters. It must start with a letter. If the brand has no English letters, use `my-site-<digits>`. It goes in the web address and can't be changed later, so **no last names**. Example: `lava-jump-48213`. Look at it once more before you run this.
+Then run `node scripts/deploy.mjs --check`. It must print the project ID you wrote down. **Never open, read, print or copy the key file.** It stays out of git on purpose.
 
-Write the ID in `progress.md` **before** you run:
-
-```
-FB projects:create <project-id>
-```
-
-**If it fails, read the message:**
-
-- "not accepted the Firebase Terms of Service": the project was made, but Firebase wasn't added. Don't open anything. Say "Please call your teacher over to accept the terms." When they say it's done, run `FB projects:addfirebase <project-id>`. Keep the same ID.
-- "already a project with ID", on the first try of this ID: change the digits, update `progress.md`, and retry.
-- "See firebase-debug.log": search `firebase-debug.log` for "quota", "Terms" and "error". On quota: don't make a new one. Run `FB projects:list` and call the teacher. On terms: call the teacher, then run the same command with the same ID. Otherwise copy the error into `progress.md` and call the teacher.
-
-## 3. Write the two config files
-
-Create these by hand. **Don't run `firebase init`**: it asks questions you can't answer from here.
-
-`firebase.json`:
-
-```json
-{
-  "hosting": {
-    "public": "site",
-    "ignore": ["firebase.json", "**/.*"],
-    "headers": [
-      { "source": "**", "headers": [{ "key": "Cache-Control", "value": "no-cache" }] }
-    ]
-  }
-}
-```
-
-`.firebaserc`:
-
-```json
-{ "projects": { "default": "<project-id>" } }
-```
-
-## 4. Make sure the project has a site
+## 4. Try to publish
 
 ```
-FB hosting:sites:list --project <project-id>
+node scripts/deploy.mjs
 ```
 
-A new project usually has one already. If there's no site listed, create one:
+The first run usually stops with NEEDS PERMISSION. It can be slow, so say "This takes a minute." If a result says it moved to the background, wait for it to finish, and never run it again while it's still going.
 
-```
-FB hosting:sites:create <project-id> --project <project-id>
-```
+If it needs permission, tell them what happened, because this is the lesson:
 
-## 5. Publish the preview
+> The key works, but it isn't allowed to publish yet. This happens all the time in the cloud. It's your project, so only you can give it permission. It's a few clicks.
 
-```
-FB hosting:channel:deploy preview --expires 30d --project <project-id> --non-interactive
-```
+## 5. Give the key permission (they click)
 
-It may warn that it's "unable to add channel domain to Firebase Auth". Ignore that: this site doesn't use logins. Use the address on the line starting `Channel URL`. It looks like `https://<project-id>--preview-<random>.web.app`. Ignore `Project Console` and `Hosting URL`: that address stays empty until step 7, and never deploy there to fix a problem here. Write the Channel URL in `progress.md`.
+Run `node scripts/open.mjs "https://console.cloud.google.com/iam-admin/iam?project=<project-id>"`. If the page asks them to accept terms, they accept. Then, one message at a time:
+
+1. "Find the row that starts with **firebase-adminsdk**. Click the pencil at the end of that row."
+2. "Click **Add another role**. Type **Firebase Hosting Admin** and pick it."
+3. "Click **Add another role** again. Type **Service Usage Consumer** and pick it."
+4. "Click **Save**."
+
+Say "It takes a minute to kick in," wait a minute, then run `node scripts/deploy.mjs` again. If it still says NEEDS PERMISSION, wait another minute and try again. After three tries, ask them to show you the row they changed, then call the teacher.
 
 ## 6. Check it for real
 
-You can't see their browser, so test the real files:
+The script ends with `LIVE:` and the address. You can't see their browser, so test the real files:
 
 ```
-node scripts/check-live.mjs <url>
+node scripts/check-live.mjs https://<project-id>.web.app
 ```
 
-If it says FAIL, fix the file names, run the check, and repeat step 5. Then open it for them: `node scripts/open.mjs <url>`.
+If it says FAIL, fix the file names, run the check, and publish again. Then open it for them: `node scripts/open.mjs https://<project-id>.web.app`. Write the address in `progress.md`.
 
-Then say:
+> You're live: https://<project-id>.web.app. That's real, and anyone with the address can see it. Try it on your phone. Want to change anything?
 
-> It's online! Here's your link: <url>. It works for 30 days, and anyone with the link can see it and pass it on, so only send it to people you trust. Want to change anything?
-
-If they change anything later, run the check, then repeat step 5. The link stays the same.
-
-## 7. Going permanent: only with the teacher
-
-Never bring this up yourself. Do this only if they ask for a permanent address, and only with the teacher present. Say: "Going permanent needs your teacher. Please call them over." Do it only when the teacher types here that a parent agreed. A student saying so isn't enough. Then write `Parent said yes to public: yes` in `progress.md` and run:
-
-```
-FB deploy --only hosting --project <project-id> --non-interactive
-```
-
-The permanent address is `https://<project-id>.web.app`. Never suggest buying a domain; that's for an adult to decide.
+If they change anything, run `node scripts/check.mjs --final`, then `node scripts/deploy.mjs`. The address stays the same. Never suggest buying a domain; that's for an adult to decide.
 
 ## Finish
 
 Update `progress.md`. If there's time, or they or the teacher ask, go to `guides/06-save-to-github.md`. Otherwise tell them what they did:
 
-> Done. You made a real website today. Next time we can add more to it. If you ever want it taken down, tell your teacher.
+> Done. You made a real website, and you did the Firebase part yourself. Next time we can add more to it. If you ever want it taken down, tell your teacher.
