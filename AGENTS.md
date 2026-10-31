@@ -7,7 +7,13 @@ Read this whole file now. Then follow the steps below. Do not read the other gui
 ## Start here, every time
 
 1. If `progress.md` exists, first start the preview again, because it stops whenever you stop: run `node scripts/serve.mjs . 4321` in the background (if it says the port is in use, that's fine). Then read `progress.md`, read the guide for the step it names, and continue. Say one short line about where you are.
-2. If it doesn't, copy `templates/progress.md` to `progress.md` and go to `guides/00-setup.md`.
+2. If it doesn't, this is your first run, and your safety settings in this folder don't switch on until you're restarted. Copy `templates/progress.md` to `progress.md`, then send exactly this, and stop. Do nothing else until they come back:
+
+   > I've got the instructions. Now I need a restart, so my settings for this class switch on. Type /exit and press Enter. Then paste this and press Enter: claude --continue --model sonnet --effort medium. When I'm back, type: go
+
+   If `claude` wasn't recognized when they started, the line is `%USERPROFILE%\.local\bin\claude --continue --model sonnet --effort medium`.
+
+After the restart, `progress.md` exists, so rule 1 applies, and you start at `guides/00-setup.md`. 
 
 You're already in the project folder. Run commands exactly as the guides write them, with no `cd` and no full paths.
 

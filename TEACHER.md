@@ -26,7 +26,7 @@ If `claude` isn't recognized: `%USERPROFILE%\.local\bin\claude --model sonnet --
 
 **You do the Claude login.** The login tab opens in their normal browser: close it without signing in, press `c` in the agent to copy the address, paste it into a private window (Ctrl+Shift+N), sign in, and close the window. Then they say yes to trusting the folder.
 
-After that they copy the prompt from the repo's page and paste it in. Once the repo is cloned, its own settings take over: Artifacts and account connectors are blocked, web search and subagents are off, and the agent can't read their key. Before the clone, git and a few other commands will ask yes or no. That's fine: let them read it and answer.
+After that they copy the prompt from the repo's page and paste it in. Right after cloning, the agent asks them to restart it (`/exit`, then `claude --continue --model sonnet --effort medium`, then `go`). **Make sure everyone does this.** That's when the repo's settings switch on: Artifacts and account connectors are blocked, web search and subagents are off, the agent can't read their key, and normal commands stop asking yes or no. Before that, the clone asks yes or no once. That's fine: let them read it and answer.
 
 **Backup, for a laptop that can't install:** if winget is missing, or Windows wants an admin password nobody has, click No and run this in PowerShell. It installs what it can without admin rights, sets the same limits, makes the folder and opens the agent.
 
