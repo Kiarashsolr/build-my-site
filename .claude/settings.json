@@ -1,4 +1,6 @@
 {
+  "model": "sonnet",
+  "effortLevel": "medium",
   "enableArtifact": false,
   "autoMemoryEnabled": false,
   "env": {

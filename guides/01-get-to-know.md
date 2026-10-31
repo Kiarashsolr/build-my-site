@@ -1,4 +1,4 @@
-# Step 1: Get to know their brand (10 minutes)
+# Step 1: Get to know their brand (7 minutes)
 
 **Goal:** fill in `brand.md` (copy it from `templates/brand.md`) with real material, in their own words, without it feeling like a form.
 
@@ -6,7 +6,7 @@
 
 Ask for their stuff before you ask any questions:
 
-> Did you bring your homework, like your style guide, your logo, your pictures and the websites you liked? It's fine if you didn't.
+> Did you bring your homework? That means your style guide, your logo, your one line and 3 sentences about your brand, the things you want to show, and your websites. It's fine if you didn't.
 
 If yes, open the folder for them (`node scripts/open.mjs my-stuff`) and say:
 
@@ -35,7 +35,7 @@ Nothing brought? No problem, and no comment on it. Everything below works from z
 
 ## 2. Ask only what's missing
 
-One question per message, in this order. **Skip anything you already know.** Stop as soon as you have enough, and don't go past 10 minutes.
+One question per message, in this order. **Skip anything you already know.** Stop as soon as you have enough, and don't go past 7 minutes.
 
 | Fill in | Ask something like | If they're stuck, or say "idk" |
 |---|---|---|
@@ -47,6 +47,7 @@ One question per message, in this order. **Skip anything you already know.** Sto
 | Colours | "Do you have colours picked?" | Get codes from their style guide. None? You'll propose them in Step 2. |
 | Fonts | "Picked any fonts?" | None? You'll propose them in Step 2. |
 | Goal | "When someone's on your site, what should they do or think at the end?" | Offer: know your idea, see what you've made, remember your name. |
+| Contact | "Last week's homework asked how people can reach you. Has a parent said it's OK to put an email on your site?" | If yes, write `Parent OK'd email on the site: yes` in `progress.md`. If not, say: "That's fine. We'll leave it off for now, and it's easy to add later." Never add a contact form, because this site can't receive one. |
 | Things to show | "What's something you've made or done that could go on the site?" | Anything counts: a drawing, a song, a video, a logo, a plan, a screenshot of a game level, a list of flavours. Fewer than three is fine. For each thing, note whether it's made, being tried, or an idea, in their words. See "Nothing to show?" below. |
 
 If the brand sounds like a person's full name, ask once: "Is that your real name?" If yes, use only the first name or another brand name, and write that in `brand.md`. Don't write the last name anywhere. Don't make up a brand name for them, like "Sam Draws": offer it as a question, and use it only if they say yes.

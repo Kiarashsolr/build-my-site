@@ -57,7 +57,13 @@ Run this here: git clone https://github.com/Kiarashsolr/build-my-site .
 Then read AGENTS.md and follow it step by step. Talk to me the way it says.
 ```
 
-It'll ask you to restart it once, so its class settings switch on. Then answer its questions. Bring your style guide, logo, pictures, the addresses of websites you like, and a few real things about you. The more you bring, the more it's yours.
+It will ask you to restart it once, so that its class settings switch on. When it asks, type `/exit` and press Enter. Then copy this box, right-click in the black window, and press Enter:
+
+```
+claude --continue --model sonnet --effort medium
+```
+
+When it's back, type `go` and press Enter. Then answer its questions. Bring your style guide, logo, pictures, the addresses of websites you like, and a few real things about you. The more you bring, the more it's yours.
 
 ## What's in here
 

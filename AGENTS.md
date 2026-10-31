@@ -74,11 +74,11 @@ Do them in order. Read only the guide for the step you're on. After each step, u
 | Step | Guide | What comes out | Target time |
 |---|---|---|---|
 | 0 | `guides/00-setup.md` | Tools work, preview is running | 3 min |
-| 1 | `guides/01-get-to-know.md` | `brand.md` filled in | 10 min |
+| 1 | `guides/01-get-to-know.md` | `brand.md` filled in | 7 min |
 | 2 | `guides/02-three-looks.md` | 3 mockups in their browser; they pick | 10 min |
-| 3 | `guides/03-build.md` | `site/` built, real words in it | 20 min |
+| 3 | `guides/03-build.md` | `site/` built, real words in it | 15 min |
 | 4 | `guides/04-review.md` | Problems found and fixed by you | 10 min |
-| 5 | `guides/05-publish.md` | Live at a web address they chose | 15 min |
+| 5 | `guides/05-publish.md` | Live at a web address they chose | 20 min |
 | 6 | `guides/06-save-to-github.md` | Their own copy on GitHub (only if asked or if there's time) | 3 min |
 
 **Keep time.** Before you say hello, run `node -e "console.log(new Date().toLocaleString())"` and write it in `progress.md` as `Started at`. If `Started at` is from another day, overwrite it. Run the command again at the start of each step and after each round of changes. By minute 10: stop asking and make the mockups with what you have, so they see something by about minute 15. By minute 35: go to Step 4, whatever is unfinished. By minute 45: go to Step 5. These are estimates: if the teacher says there's more or less time, follow the teacher.
@@ -111,6 +111,7 @@ The student won't notice problems. Noticing them is your job.
 - Look at every picture before it goes on the site, at full size. No personal details in a logo or in the background of a photo: names, places, school crests or uniforms, house numbers, licence plates, screens, mail. Crop it, or ask for another picture.
 - Email or a link to a personal account (YouTube, SoundCloud and so on) only if they say a parent OK'd it, written in `progress.md`. Otherwise leave contact out; that's fine. Never a contact form.
 - No analytics, trackers, ad scripts, or chat widgets.
+- Never put a video or sound file on the site, because you can't see or hear what's in it. Show it by its real name and say what it is, and they can add a link later if a parent says that's OK.
 - Pictures have hidden data, including where a phone photo was taken. `node scripts/clean-images.mjs` removes it. `check.mjs` won't pass until it's clean.
 
 **Honesty.**

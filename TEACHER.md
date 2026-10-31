@@ -72,7 +72,7 @@ Also log out of GitHub if they used it: `gh auth logout --hostname github.com`. 
 ## Things worth knowing
 
 - **Sites are really public,** at `https://<project-id>.web.app`, under the student's own Google account, after they say yes to the agent's question.
-- **To restart a session:** in a new CMD window run `cd %USERPROFILE%\my-site`, then `claude --continue`, then type "read AGENTS.md and continue". It picks up from `progress.md`. Don't run `claude` from any other folder. You'll need to log in again next class.
+- **To restart a session:** in a new CMD window run `cd %USERPROFILE%\my-site`, then `claude --continue --model sonnet --effort medium`, then type "read AGENTS.md and continue". It picks up from `progress.md`. Don't run `claude` from any other folder. You'll need to log in again next class.
 - **To look over a student's shoulder,** read `progress.md` and `brand.md`.
 - **To take a site down:** the student signs in at console.firebase.google.com, opens the project, then Hosting, and chooses Disable site from the menu on their site's row. A family can do the same. Or, logged in with that account in your own terminal: `npx -y firebase-tools@latest hosting:disable --project <project-id> --force`.
 - **Their key is a password to their project.** It's in `secrets/` and git ignores it. If it ever leaks, they delete it in Project settings, Service accounts.
