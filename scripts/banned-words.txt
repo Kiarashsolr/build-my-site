@@ -1,0 +1,88 @@
+# Phrases that make a site read as AI-written. scripts/check.mjs fails on any of these.
+# Sources: Wikipedia, "Signs of AI writing", plus common marketing filler.
+# A student's own exact sentence can use one of these: if so, tell the student and let them choose,
+# then reword it anyway if they don't mind. One line per phrase.
+
+# AI vocabulary
+delve
+tapestry
+testament
+pivotal
+vibrant
+seamless
+seamlessly
+robust
+leverage
+leveraging
+elevate
+elevates
+elevating
+unleash
+unlock your
+unlock the
+empower
+empowering
+embark
+journey
+realm
+landscape
+game-changer
+game changer
+cutting-edge
+state-of-the-art
+world-class
+best-in-class
+next-level
+meticulous
+meticulously
+bespoke
+curated
+foster
+fostering
+harness
+navigate the
+nestled
+boasts
+showcase
+showcasing
+underscores
+highlights the importance
+resonate
+resonates
+synergy
+holistic
+innovative
+passionate about
+dedicated to
+committed to
+driven by
+at the intersection of
+in today's
+in the world of
+ever-evolving
+fast-paced
+look no further
+whether you're
+from start to finish
+take it to the next level
+crafted with
+crafted
+handcrafted
+experience the
+discover the
+welcome to my
+welcome to the
+one sip at a time
+one step at a time
+more than a
+rich history
+stands as
+serves as a
+plays a vital role
+a vital
+a crucial
+it's important to note
+in conclusion
+let's dive
+dive in
+dive into

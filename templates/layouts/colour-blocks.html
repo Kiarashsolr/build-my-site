@@ -1,0 +1,50 @@
+<!doctype html>
+<!-- COLOUR BLOCKS. A wall of uneven blocks, not stacked stripes. Replace every [[...]]. The colours here are grey on purpose: choose real ones (see guides/design.md). Change the fonts to fit. Delete what you have nothing real for, and delete this comment: comments are public. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[[Brand name]]</title>
+<meta name="description" content="[[One true sentence about it]]">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #ffffff; --text: #1a1a1a; --main: #555555; --on-main: #ffffff; --accent: #d0d0d0; --on-accent: #1a1a1a; --third: #aaaaaa; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 400 18px/1.5 "Nunito", system-ui, sans-serif; }
+h1, h2 { font-family: "Fredoka", system-ui, sans-serif; font-weight: 700; margin: 0; line-height: 1; }
+.wall { display: grid; gap: 8px; padding: 8px; grid-template-columns: 1fr; }
+.b { padding: 24px; display: flex; flex-direction: column; justify-content: flex-end; gap: 12px; min-height: 180px; overflow: hidden; position: relative; }
+.b p { margin: 0; max-width: 40ch; }
+.hero { background: var(--main); color: var(--on-main); min-height: 340px; }
+.hero h1 { font-size: clamp(3.5rem, 13vw, 10rem); }
+.hero p { font-size: 1.25rem; font-weight: 700; }
+.fact { background: var(--accent); color: var(--on-accent); }
+.fact strong { font: 700 clamp(4rem, 14vw, 8rem)/.9 "Fredoka", system-ui, sans-serif; }
+.warm { background: var(--third); color: var(--text); }
+.plain { border: 4px solid var(--text); }
+h2 { font-size: clamp(1.8rem, 4vw, 3rem); }
+/* One big thing only this brand would have sits above the name, so it can never run over the words. */
+.big { flex: 1; display: flex; align-items: center; }
+footer { padding: 16px; font-size: .95rem; }
+@media (min-width: 800px) {
+  .wall { grid-template-columns: repeat(6, 1fr); }
+  .hero { grid-column: span 4; grid-row: span 2; min-height: 520px; padding: 40px; }
+  .fact { grid-column: span 2; }
+  .warm { grid-column: span 2; }
+  .plain { grid-column: span 3; }
+}
+</style>
+</head>
+<body>
+<main class="wall">
+  <header class="b hero"><div class="big" aria-hidden="true">[[The big thing: their logo in an img, or a shape from templates/shapes.html with --size set]]</div><h1>[[Name]]</h1><p>[[One line saying what this is, in their words]]</p></header>
+  <section class="b fact"><strong>[[A real number]]</strong><p>[[What that number is, in a few words]]</p></section>
+  <section class="b warm"><h2>[[Thing one]]</h2><p>[[One true sentence]]</p></section>
+  <section class="b plain"><h2>[[Why this]]</h2><p>[[Their reason, in their words]]</p></section>
+  <section class="b plain"><h2>[[What's next]]</h2><p>[[One true sentence]]</p></section>
+</main>
+<footer>Made with help from AI.</footer>
+</body>
+</html>

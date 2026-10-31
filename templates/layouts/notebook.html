@@ -1,0 +1,47 @@
+<!doctype html>
+<!-- THE NOTEBOOK. A page from their notebook. For a quiet student, or few pictures. Replace every [[...]]. The colours here are grey on purpose: choose real ones (see guides/design.md). Change the fonts to fit. Delete what you have nothing real for, and delete this comment: comments are public. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[[Brand name]]</title>
+<meta name="description" content="[[One true sentence about it]]">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Karla:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #ffffff; --text: #1a1a1a; --main: #555555; --on-main: #ffffff; --accent: #d0d0d0; --on-accent: #1a1a1a; --rule: #e4e4e4; --margin: #bbbbbb; }
+* { box-sizing: border-box; }
+html { background: var(--bg); }
+body { margin: 0; color: var(--text); font: 400 18px/32px "Karla", system-ui, sans-serif; background-image: repeating-linear-gradient(transparent 0 31px, var(--rule) 31px 32px); }
+.page { padding: 32px 16px 32px 40px; border-left: 2px solid var(--margin); margin-left: 16px; max-width: 760px; }
+h1, h2 { font-family: "Caveat", cursive; font-weight: 700; color: var(--main); margin: 0; }
+h1 { font-size: clamp(4rem, 16vw, 8rem); line-height: 96px; }
+h2 { font-size: 2.4rem; line-height: 64px; margin-top: 32px; }
+p { margin: 0 0 32px; max-width: 58ch; }
+.lead { font-size: 1.4rem; font-weight: 700; }
+mark { background: var(--accent); color: var(--on-accent); padding: 0 4px; }
+ul { margin: 0 0 32px; padding: 0; list-style: none; }
+li { padding-left: 28px; position: relative; }
+li::before { content: ""; position: absolute; left: 0; top: 10px; width: 14px; height: 14px; border: 2px solid var(--main); }
+li.done::before { background: var(--main); }
+footer { font-size: .95rem; }
+@media (min-width: 800px) { .page { margin-left: 12vw; padding: 64px 32px 64px 56px; } }
+</style>
+</head>
+<body>
+<main class="page">
+  <h1>[[Name]]</h1>
+  <p class="lead">[[One line saying what this is, with <mark>one phrase</mark> marked like a highlighter]]</p>
+  <div class="big" aria-hidden="true">[[The big thing: their logo in an img, or a shape from templates/shapes.html with --size set]]</div>
+  <h2>[[What I've got so far]]</h2>
+  <ul>
+    <li class="done">[[Something real and finished]]</li>
+    <li>[[Something still on the list]]</li>
+  </ul>
+  <h2>[[Why this?]]</h2>
+  <p>[[Their reason, in their words]]</p>
+  <footer>Made with help from AI.</footer>
+</main>
+</body>
+</html>

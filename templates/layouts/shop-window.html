@@ -1,0 +1,48 @@
+<!doctype html>
+<!-- THE SHOP WINDOW. Each thing gets a whole screen, like a shop display. For someone with real work to show. Replace every [[...]]. The colours here are grey on purpose: choose real ones (see guides/design.md). Change the fonts to fit. Delete what you have nothing real for, and delete this comment: comments are public. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[[Brand name]]</title>
+<meta name="description" content="[[One true sentence about it]]">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #ffffff; --text: #1a1a1a; --main: #555555; --on-main: #ffffff; --accent: #d0d0d0; --on-accent: #1a1a1a; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 400 18px/1.55 "DM Sans", system-ui, sans-serif; }
+h1, h2 { font-family: "DM Serif Display", Georgia, serif; font-weight: 400; margin: 0; line-height: 1; }
+.door { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px 32px; padding: 20px 16px; border-bottom: 2px solid var(--text); }
+.door h1 { font-size: 2.2rem; }
+.door p { margin: 0; font-weight: 600; }
+.item { display: grid; grid-template-columns: 1fr; }
+/* Only for someone with real work to show. Put their picture inside .show, or a shape from templates/shapes.html. */
+.show { background: var(--accent); color: var(--on-accent); min-height: 320px; display: grid; place-items: center; padding: 24px; overflow: hidden; font: 400 clamp(4rem, 18vw, 11rem)/.9 "DM Serif Display", Georgia, serif; text-align: center; }
+.show img { max-width: 100%; max-height: 520px; height: auto; }
+.item:nth-of-type(even) .show { background: var(--main); color: var(--on-main); }
+.label { padding: 24px 16px 40px; }
+.label h2 { font-size: clamp(1.8rem, 4vw, 3rem); margin-bottom: 8px; }
+.label p { margin: 0; max-width: 45ch; }
+footer { padding: 24px 16px; font-size: .95rem; border-top: 2px solid var(--text); }
+@media (min-width: 800px) {
+  .door, footer { padding-left: 40px; padding-right: 40px; }
+  .item { grid-template-columns: 2fr 1fr; align-items: end; }
+  .item:nth-of-type(even) { grid-template-columns: 1fr 2fr; }
+  .item:nth-of-type(even) .show { order: 2; }
+  .show { min-height: 520px; }
+  .label { padding: 40px; }
+}
+</style>
+</head>
+<body>
+<header class="door"><h1>[[Name]]</h1><p>[[One line saying what this is]]</p></header>
+<main>
+  <section class="item"><div class="show" aria-hidden="true">[[Their picture of this thing, or a shape from templates/shapes.html]]</div><div class="label"><h2>[[Thing one]]</h2><p>[[One true sentence]]</p></div></section>
+  <section class="item"><div class="show" aria-hidden="true">[[Their picture of this thing, or a shape from templates/shapes.html]]</div><div class="label"><h2>[[Thing two]]</h2><p>[[One true sentence]]</p></div></section>
+  <section class="item"><div class="show" aria-hidden="true">[[Their picture of this thing, or a shape from templates/shapes.html]]</div><div class="label"><h2>[[Why this]]</h2><p>[[Their reason, in their words]]</p></div></section>
+</main>
+<footer>Made with help from AI.</footer>
+</body>
+</html>

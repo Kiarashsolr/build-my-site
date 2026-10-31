@@ -1,0 +1,33 @@
+/* Agent: this is a skeleton, not a design. Rebuild it to match the look they picked.
+   Keep these five variable names: scripts/check.mjs reads them to test contrast.
+   Use them for every colour. */
+:root {
+  --bg: #ffffff;
+  --text: #1a1a1a;
+  --main: #222222;
+  --accent: #555555;
+  --on-accent: #ffffff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+header, section, footer {
+  padding: 48px 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+h1, h2 { color: var(--main); line-height: 1.1; text-wrap: balance; }
+h1 { font-size: clamp(2.5rem, 10vw, 6rem); margin: 0 0 16px; }
+p { max-width: 65ch; }
+img { max-width: 100%; height: auto; }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }

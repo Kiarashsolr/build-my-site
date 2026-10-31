@@ -1,0 +1,47 @@
+<!doctype html>
+<!-- THE LOGBOOK. The story so far, newest at the top. For a project in progress, or little to show but a story. Use "First", "Then", "Now", "Next": never make up dates, and use a label only if they told you so. If they didn't, use another layout. Replace every [[...]]. The colours here are grey on purpose: choose real ones (see guides/design.md). Change the fonts to fit. Delete what you have nothing real for, and delete this comment: comments are public. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[[Brand name]]</title>
+<meta name="description" content="[[One true sentence about it]]">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Rubik:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #ffffff; --text: #1a1a1a; --main: #555555; --on-main: #ffffff; --accent: #d0d0d0; --on-accent: #1a1a1a; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 400 18px/1.55 "Rubik", system-ui, sans-serif; }
+h1 { font: 400 clamp(2.4rem, 11vw, 6.5rem)/1 "Rubik Mono One", Impact, sans-serif; margin: 0; color: var(--main); overflow-wrap: anywhere; }
+.top { padding: 32px 16px 24px; display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; align-items: center; }
+.top p { margin: 12px 0 0; font-size: 1.25rem; font-weight: 500; max-width: 38ch; }
+.log { list-style: none; margin: 0; padding: 0 16px 32px; display: grid; gap: 0; }
+.log li { display: grid; grid-template-columns: 64px 1fr; gap: 16px; padding: 20px 0; border-top: 3px solid var(--text); }
+.when { font-weight: 500; text-transform: uppercase; letter-spacing: .06em; font-size: .85rem; padding-top: 4px; }
+.log h2 { font: 500 clamp(1.4rem, 3vw, 2rem)/1.15 "Rubik", system-ui, sans-serif; margin: 0 0 4px; }
+.log p { margin: 0; max-width: 55ch; }
+.now { background: var(--accent); color: var(--on-accent); margin: 0 -16px; padding: 20px 16px !important; border-top: 0 !important; }
+footer { padding: 0 16px 32px; font-size: .95rem; }
+@media (min-width: 800px) {
+  .top { padding: 56px 40px 32px; }
+  .log { padding: 0 40px 40px; }
+  .log li { grid-template-columns: 140px 1fr; }
+  .now { margin: 0 -40px; padding: 28px 40px !important; }
+  footer { padding: 0 40px 40px; }
+}
+</style>
+</head>
+<body>
+<header class="top"><div><h1>[[Name]]</h1><p>[[One line saying what this is, in their words]]</p></div><div class="big" aria-hidden="true">[[The big thing: their logo in an img, or a shape from templates/shapes.html with --size set]]</div></header>
+<main>
+  <ol class="log">
+    <li class="next"><div class="when">Next</div><div><h2>[[What's next]]</h2><p>[[One true sentence]]</p></div></li>
+    <li class="now"><div class="when">Now</div><div><h2>[[What they're doing now]]</h2><p>[[One true sentence]]</p></div></li>
+    <li><div class="when">Then</div><div><h2>[[Something that happened]]</h2><p>[[One true sentence]]</p></div></li>
+    <li><div class="when">First</div><div><h2>[[How it started]]</h2><p>[[Their reason, in their words]]</p></div></li>
+  </ol>
+</main>
+<footer>Made with help from AI.</footer>
+</body>
+</html>

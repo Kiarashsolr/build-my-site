@@ -1,0 +1,51 @@
+<!doctype html>
+<!-- THE MENU. A cafe board. For food, drinks and services. No prices unless they are real: use "idea", "testing" or "done" on the right. Replace every [[...]]. The colours here are grey on purpose: choose real ones (see guides/design.md). Change the fonts to fit. Delete what you have nothing real for, and delete this comment: comments are public. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[[Brand name]]</title>
+<meta name="description" content="[[One true sentence about it]]">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #ffffff; --text: #1a1a1a; --main: #555555; --on-main: #ffffff; --accent: #d0d0d0; --on-accent: #1a1a1a; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 400 18px/1.5 "Lato", system-ui, sans-serif; }
+h1, h2 { font-family: "Abril Fatface", Georgia, serif; font-weight: 400; margin: 0; line-height: 1; }
+.board { max-width: 1040px; margin: 0 auto; padding: 32px 16px; }
+.head { display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; align-items: center; border-bottom: 6px double var(--text); padding-bottom: 24px; margin-bottom: 32px; }
+.head h1 { font-size: clamp(3.4rem, 13vw, 8rem); color: var(--main); }
+.head p { margin: 12px 0 0; font-size: 1.25rem; max-width: 40ch; }
+.cols { display: grid; gap: 40px; }
+h2 { font-size: 2rem; margin-bottom: 12px; color: var(--main); }
+.list { list-style: none; margin: 0; padding: 0; }
+.list li { display: flex; align-items: baseline; gap: 8px; padding: 8px 0; font-weight: 700; }
+.list li::after { content: ""; order: 1; flex: 1; border-bottom: 2px dotted var(--text); opacity: .7; }
+.list em { order: 2; font-style: normal; font-weight: 400; }
+.special { background: var(--accent); color: var(--on-accent); padding: 20px; transform: rotate(-1.5deg); }
+.special h2 { color: var(--on-accent); }
+.special p { margin: 0; }
+footer { padding: 32px 0 0; font-size: .95rem; }
+@media (min-width: 800px) { .board { padding: 56px 40px; } .cols { grid-template-columns: 3fr 2fr; gap: 64px; align-items: start; } }
+</style>
+</head>
+<body>
+<div class="board">
+  <header class="head"><div><h1>[[Name]]</h1><p>[[One line saying what this is, in their words]]</p></div><div class="big" aria-hidden="true">[[The big thing: their logo in an img, or a shape from templates/shapes.html with --size set]]</div></header>
+  <main class="cols">
+    <section>
+      <h2>[[Category, like Flavours]]</h2>
+      <ul class="list">
+        <li>[[Item]]<em>[[done]]</em></li>
+        <li>[[Item]]<em>[[testing]]</em></li>
+        <li>[[Item]]<em>[[idea]]</em></li>
+      </ul>
+    </section>
+    <aside class="special"><h2>[[Why this]]</h2><p>[[Their reason, in their words]]</p></aside>
+  </main>
+  <footer>Made with help from AI.</footer>
+</div>
+</body>
+</html>

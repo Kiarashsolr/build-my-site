@@ -1,0 +1,69 @@
+<!doctype html>
+<!-- THE BIG THING. Ready shapes, made with CSS only. Copy the HTML and the CSS for the one that fits, then change the size and colours.
+     Don't use one just because it's here. Ask: what does this brand's world really look like? Mix these or invent your own.
+     Open this file in the preview to see them all. Set --size on a shape to make it bigger, like style="--size: clamp(220px, 60vw, 420px)". Keep it solid, at full strength. A faint outline doesn't count.
+     The colours here are --a (dark), --b (main), --c (accent), --d (light). When you copy a shape, change them to your page's --text, --main, --accent and --bg, and replace any hex colour inside it. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shapes</title>
+<style>
+:root { --a: #1e1e1e; --b: #e0482a; --c: #f5c518; --d: #f4f1e8; }
+body { margin: 0; padding: 24px; background: var(--d); color: var(--a); font: 16px system-ui, sans-serif; display: grid; gap: 32px; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+h2 { font-size: 1rem; margin: 0 0 12px; }
+
+/* RECORD: music, DJs, anything played */
+.record { width: var(--size, 240px); aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle, var(--b) 0 16%, var(--d) 16% 17.5%, var(--b) 17.5% 28%, transparent 28%), repeating-radial-gradient(circle, var(--a) 0 3px, #333 3px 5px); }
+
+/* WHEEL: cars, bikes, skateboards. Tyre, rim and spokes. */
+.wheel { width: var(--size, 240px); aspect-ratio: 1; border-radius: 50%; border: calc(var(--size, 240px) * .12) solid var(--a); background: radial-gradient(circle, var(--a) 0 12%, transparent 12.5%), repeating-conic-gradient(var(--b) 0 8deg, transparent 8deg 45deg), var(--d); box-sizing: border-box; }
+
+/* BUBBLES: drinks, soap, anything fizzy. Add or move bubbles with the --x, --y and --s numbers. */
+.bubbles { position: relative; width: var(--size, 240px); height: var(--size, 240px); }
+.bubbles i { position: absolute; left: var(--x); top: var(--y); width: var(--s); height: var(--s); border-radius: 50%; border: 6px solid var(--b); background: radial-gradient(circle at 32% 30%, var(--d) 0 12%, transparent 13%); box-sizing: border-box; }
+
+/* SOUND BARS: beats, podcasts, a voice. Set each bar's height. */
+.bars { display: flex; align-items: flex-end; gap: 8px; height: var(--size, 200px); width: var(--size, 100%); }
+.bars i { flex: 1; height: var(--h); background: var(--b); }
+
+/* PIXELS: games, code, anything retro. Each letter in --map draws a square. */
+.pixels { display: grid; grid-template-columns: repeat(8, calc(var(--size, 224px) / 8)); }
+.pixels i { width: calc(var(--size, 224px) / 8); height: calc(var(--size, 224px) / 8); background: var(--b); }
+.pixels i.o { background: transparent; }
+.pixels i.y { background: var(--c); }
+
+/* RACE STRIPES: sport, speed. Put it behind or beside big type. */
+.stripes { height: var(--size, 200px); overflow: hidden; transform: skewX(-18deg); background: linear-gradient(90deg, var(--a) 0 22%, transparent 22% 28%, var(--b) 28% 50%, transparent 50% 56%, var(--c) 56% 78%, transparent 78%); }
+
+/* CHECKERS: racing, cafes, skate, tiles */
+.checks { height: var(--size, 200px); background: conic-gradient(var(--a) 25%, var(--d) 0 50%, var(--a) 0 75%, var(--d) 0) 0 0 / 56px 56px; }
+
+/* TICKET: events, shows, anything with a first time. Put real words inside. */
+.ticket { padding: 28px 36px; background: radial-gradient(circle at 0 50%, var(--d) 16px, transparent 17px), radial-gradient(circle at 100% 50%, var(--d) 16px, transparent 17px), var(--c); font: 800 1.6rem/1.1 system-ui, sans-serif; transform: rotate(-3deg); }
+
+/* SCRIBBLE: drawing, writing, anything by hand. An underline under a word: change the stroke colour in the svg. */
+.scribble { font: 800 3rem/1 system-ui, sans-serif; display: inline-block; padding-bottom: 18px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 20' preserveAspectRatio='none'%3E%3Cpath d='M3 12 C60 2 90 18 150 8 S250 16 297 6' fill='none' stroke='%23e0482a' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E") bottom / 100% 18px no-repeat; }
+
+/* BOTTLE: drinks, sauces, perfume. Fill it to any level with --full. */
+.bottle { width: calc(var(--size, 260px) * .42); height: var(--size, 260px); margin-top: 46px; position: relative; border: 6px solid var(--a); border-radius: 44px 44px 16px 16px; background: linear-gradient(to top, var(--b) var(--full, 65%), transparent 0); box-sizing: border-box; }
+.bottle::before { content: ""; position: absolute; left: 26px; right: 26px; top: -46px; height: 40px; background: var(--a); border-radius: 8px 8px 0 0; }
+
+/* STICKER: for a short true fact, like "version 6". Goes on top of something. */
+.sticker { width: var(--size, 160px); aspect-ratio: 1; display: grid; place-items: center; text-align: center; padding: 16px; box-sizing: border-box; background: var(--c); font: 800 1.2rem/1.1 system-ui, sans-serif; clip-path: polygon(50% 0, 61% 12%, 75% 7%, 79% 21%, 93% 25%, 88% 39%, 100% 50%, 88% 61%, 93% 75%, 79% 79%, 75% 93%, 61% 88%, 50% 100%, 39% 88%, 25% 93%, 21% 79%, 7% 75%, 12% 61%, 0 50%, 12% 39%, 7% 25%, 21% 21%, 25% 7%, 39% 12%); transform: rotate(-8deg); }
+</style>
+</head>
+<body>
+<div><h2>Record</h2><div class="record" aria-hidden="true"></div></div>
+<div><h2>Wheel</h2><div class="wheel" aria-hidden="true"></div></div>
+<div><h2>Bubbles</h2><div class="bubbles" aria-hidden="true"><i style="--x:0%;--y:46%;--s:50%"></i><i style="--x:46%;--y:17%;--s:33%"></i><i style="--x:71%;--y:62%;--s:21%"></i><i style="--x:25%;--y:4%;--s:15%"></i></div></div>
+<div><h2>Sound bars</h2><div class="bars" aria-hidden="true"><i style="--h:30%"></i><i style="--h:70%"></i><i style="--h:100%"></i><i style="--h:45%"></i><i style="--h:85%"></i><i style="--h:25%"></i><i style="--h:60%"></i></div></div>
+<div><h2>Pixels</h2><div class="pixels" aria-hidden="true"><i class="o"></i><i class="o"></i><i></i><i></i><i></i><i></i><i class="o"></i><i class="o"></i><i class="o"></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="o"></i><i></i><i></i><i class="y"></i><i></i><i></i><i class="y"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="o"></i><i></i><i class="o"></i><i></i><i></i><i class="o"></i><i></i><i class="o"></i><i></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i></i></div></div>
+<div><h2>Race stripes</h2><div class="stripes" aria-hidden="true"></div></div>
+<div><h2>Checkers</h2><div class="checks" aria-hidden="true"></div></div>
+<div><h2>Ticket</h2><div class="ticket">Words go here</div></div>
+<div><h2>Scribble</h2><span class="scribble">Word</span></div>
+<div style="padding-top:46px"><h2 style="margin-top:-46px;margin-bottom:58px">Bottle</h2><div class="bottle" aria-hidden="true"></div></div>
+<div><h2>Sticker</h2><div class="sticker">6 tries</div></div>
+</body>
+</html>

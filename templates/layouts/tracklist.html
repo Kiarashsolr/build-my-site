@@ -1,0 +1,58 @@
+<!doctype html>
+<!-- THE TRACKLIST. The back of an album. For music, or anything made in a series. Tap a line to open it. Replace every [[...]]. The colours here are grey on purpose: choose real ones (see guides/design.md). Change the fonts to fit. Delete what you have nothing real for, and delete this comment: comments are public. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[[Brand name]]</title>
+<meta name="description" content="[[One true sentence about it]]">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #ffffff; --text: #1a1a1a; --main: #555555; --on-main: #ffffff; --accent: #d0d0d0; --on-accent: #1a1a1a; --dim: #666666; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 400 16px/1.6 "IBM Plex Mono", ui-monospace, monospace; }
+h1, h2 { font-family: "Bebas Neue", Impact, sans-serif; font-weight: 400; margin: 0; line-height: .95; }
+.wrap { display: grid; gap: 32px; padding: 16px; }
+/* The cover. Replace with their logo or art if they have it. */
+.cover { background: var(--main); color: var(--on-main); aspect-ratio: 1; padding: 20px; display: flex; flex-direction: column; justify-content: space-between; overflow: hidden; }
+.cover h1 { font-size: clamp(3rem, 16vw, 7rem); }
+.big { flex: 1; display: flex; align-items: center; justify-content: center; }
+.cover p { margin: 0; font-weight: 600; }
+h2 { font-size: 2.2rem; color: var(--main); margin-bottom: 8px; }
+ol { list-style: none; margin: 0; padding: 0; counter-reset: t; border-top: 1px solid var(--dim); }
+li { border-bottom: 1px solid var(--dim); counter-increment: t; }
+summary { display: grid; grid-template-columns: 2.5em 1fr auto; gap: 8px; padding: 14px 0; cursor: pointer; list-style: none; font-weight: 600; min-height: 44px; }
+summary::-webkit-details-marker { display: none; }
+summary::before { content: counter(t, decimal-leading-zero); color: var(--main); }
+summary span { color: var(--dim); font-weight: 400; }
+details[open] summary { color: var(--main); }
+details p { margin: 0 0 16px 2.5em; color: var(--dim); max-width: 50ch; }
+summary:hover { color: var(--main); }
+.note { max-width: 55ch; }
+footer { padding: 24px 16px; font-size: .9rem; color: var(--dim); }
+@media (min-width: 900px) {
+  .wrap { grid-template-columns: minmax(320px, 480px) 1fr; gap: 64px; padding: 40px; align-items: start; }
+  .cover { position: sticky; top: 40px; }
+  footer { padding: 24px 40px; }
+}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="cover"><p>[[What kind of thing this is]]</p><div class="big" aria-hidden="true">[[The big thing: their logo in an img, or a shape from templates/shapes.html with --size set]]</div><h1>[[Name]]</h1></header>
+  <div>
+    <h2>[[Side A, or what the list is]]</h2>
+    <ol>
+      <li><details open><summary>[[Item one]]<span>[[done]]</span></summary><p>[[One true sentence about it]]</p></details></li>
+      <li><details open><summary>[[Item two]]<span>[[done]]</span></summary><p>[[One true sentence about it]]</p></details></li>
+      <li><details open><summary>[[Item three]]<span>[[next]]</span></summary><p>[[One true sentence about it]]</p></details></li>
+    </ol>
+    <h2 style="margin-top:40px">[[Liner notes]]</h2>
+    <p class="note">[[Their reason, in their words]]</p>
+  </div>
+</main>
+<footer>Made with help from AI.</footer>
+</body>
+</html>

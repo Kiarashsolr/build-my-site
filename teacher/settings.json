@@ -1,0 +1,67 @@
+{
+  "model": "sonnet",
+  "effortLevel": "medium",
+  "enableArtifact": false,
+  "autoMemoryEnabled": false,
+  "disableClaudeAiConnectors": true,
+  "syncClaudeAiSkills": false,
+  "syncClaudeAiPlugins": false,
+  "env": {
+    "ENABLE_CLAUDEAI_MCP_SERVERS": "false",
+    "CLAUDE_CODE_SKIP_PROMPT_HISTORY": "1",
+    "CLAUDE_CODE_DISABLE_FEEDBACK_SURVEY": "1",
+    "DISABLE_FEEDBACK_COMMAND": "1"
+  },
+  "permissions": {
+    "defaultMode": "acceptEdits",
+    "disableAutoMode": "disable",
+    "disableBypassPermissionsMode": "disable",
+    "allow": [
+      "Bash(node *)",
+      "Bash(npx -y firebase-tools@latest *)",
+      "Bash(git *)",
+      "Bash(gh *)",
+      "Bash(ls *)",
+      "Bash(mkdir *)",
+      "Bash(cp *)",
+      "Bash(mv *)",
+      "PowerShell(node *)",
+      "PowerShell(npx -y firebase-tools@latest *)",
+      "PowerShell(npx.cmd -y firebase-tools@latest *)",
+      "PowerShell(git *)",
+      "PowerShell(gh *)",
+      "PowerShell(Get-ChildItem *)",
+      "PowerShell(New-Item *)",
+      "PowerShell(Copy-Item *)",
+      "PowerShell(Move-Item *)",
+      "Read",
+      "Glob",
+      "Grep"
+    ],
+    "ask": [
+      "Bash(npx -y firebase-tools@latest deploy *)",
+      "PowerShell(npx -y firebase-tools@latest deploy *)",
+      "PowerShell(npx.cmd -y firebase-tools@latest deploy *)"
+    ],
+    "deny": [
+      "Artifact",
+      "Agent",
+      "WebSearch",
+      "WebFetch",
+      "Workflow",
+      "Skill",
+      "RemoteTrigger",
+      "CronCreate",
+      "DesignSync",
+      "PushNotification",
+      "AskUserQuestion",
+      "EnterPlanMode",
+      "mcp__*",
+      "Bash(rm -r*)",
+      "Bash(rm -fr*)",
+      "Bash(git push --force*)",
+      "PowerShell(git push --force*)",
+      "PowerShell(Remove-Item *-Recurse*)"
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+<!doctype html>
+<!-- GIANT NAME. For loud brands. Replace every [[...]]. The colours here are grey on purpose: choose real ones (see guides/design.md). Change the fonts to fit. Delete what you have nothing real for, and delete this comment: comments are public. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[[Brand name]]</title>
+<meta name="description" content="[[One true sentence about it]]">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Work+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #ffffff; --text: #1a1a1a; --main: #555555; --on-main: #ffffff; --accent: #d0d0d0; --on-accent: #1a1a1a; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 400 18px/1.55 "Work Sans", system-ui, sans-serif; }
+h1, h2 { font-family: "Anton", Impact, sans-serif; font-weight: 400; margin: 0; text-transform: uppercase; }
+.top { background: var(--main); color: var(--on-main); padding: 24px 16px 0; overflow: hidden; position: relative; }
+/* Tune the vw number until the name almost touches both edges: long names need a smaller number. */
+h1 { font-size: 24vw; line-height: .95; letter-spacing: -.01em; white-space: nowrap; }
+.line { display: flex; flex-wrap: wrap; gap: 16px 48px; justify-content: space-between; align-items: end; padding: 16px 0 32px; font-size: clamp(1.1rem, 2.4vw, 1.6rem); font-weight: 600; }
+.line p { margin: 0; max-width: 28ch; }
+.tag { background: var(--accent); color: var(--on-accent); padding: 8px 14px; transform: rotate(-3deg); font-size: 1rem; }
+.rows { padding: 0 16px; }
+.row { display: grid; grid-template-columns: 1fr; gap: 8px; padding: 32px 0; border-bottom: 4px solid var(--text); }
+.row h2 { font-size: clamp(2.2rem, 7vw, 5rem); line-height: 1; color: var(--main); }
+.row p { margin: 0; max-width: 60ch; }
+footer { padding: 32px 16px; font-size: .95rem; }
+@media (min-width: 800px) {
+  .top, .rows, footer { padding-left: 40px; padding-right: 40px; }
+  .row { grid-template-columns: 5fr 7fr; gap: 40px; align-items: baseline; }
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <h1>[[Name]]</h1>
+  <div class="line">
+    <p>[[One line saying what this is, in their words]]</p>
+    <div class="big" aria-hidden="true">[[The big thing: their logo in an img, or a shape from templates/shapes.html with --size set]]</div>
+    <span class="tag">[[A short true fact, like "version 6"]]</span>
+  </div>
+</header>
+<main class="rows">
+  <section class="row"><h2>[[Thing one]]</h2><p>[[One or two true sentences]]</p></section>
+  <section class="row"><h2>[[Thing two]]</h2><p>[[One or two true sentences]]</p></section>
+  <section class="row"><h2>[[Why this]]</h2><p>[[Their reason, in their words]]</p></section>
+</main>
+<footer>Made with help from AI.</footer>
+</body>
+</html>

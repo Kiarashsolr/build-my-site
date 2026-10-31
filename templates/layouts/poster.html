@@ -1,0 +1,47 @@
+<!doctype html>
+<!-- THE POSTER. First screen is a gig poster: logo or a big shape, huge and off-centre. Replace every [[...]]. The colours here are grey on purpose: choose real ones (see guides/design.md). Change the fonts to fit. Delete what you have nothing real for, and delete this comment: comments are public. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[[Brand name]]</title>
+<meta name="description" content="[[One true sentence about it]]">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #ffffff; --text: #1a1a1a; --main: #555555; --on-main: #ffffff; --accent: #d0d0d0; --on-accent: #1a1a1a; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 400 18px/1.55 "Archivo", system-ui, sans-serif; overflow-x: hidden; }
+h1, h2 { font-family: "Archivo Black", Impact, sans-serif; font-weight: 400; margin: 0; line-height: .95; }
+.poster { position: relative; min-height: min(92vh, 720px); padding: 24px 16px; display: flex; flex-direction: column; justify-content: flex-end; overflow: hidden; }
+/* The big thing goes in .big: their logo in an <img>, or a shape from templates/shapes.html sized up. It must mean something for this brand. */
+.big { flex: 1; display: flex; align-items: center; justify-content: flex-end; margin-bottom: 16px; }
+.big img { max-width: 100%; max-height: 420px; object-fit: contain; }
+.poster h1 { position: relative; font-size: clamp(3.4rem, 15vw, 11rem); text-transform: uppercase; transform: rotate(-4deg); transform-origin: left bottom; margin-bottom: 32px; }
+.poster p { position: relative; margin: 0; font-size: clamp(1.15rem, 2.4vw, 1.6rem); font-weight: 600; max-width: 26ch; }
+.bill { background: var(--accent); color: var(--on-accent); padding: 32px 16px; display: grid; gap: 32px; }
+.bill h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); margin-bottom: 8px; }
+.bill p { margin: 0; max-width: 55ch; }
+footer { padding: 24px 16px; font-size: .95rem; }
+@media (min-width: 800px) {
+  .poster { padding: 40px; }
+  .bill { grid-template-columns: repeat(3, 1fr); padding: 48px 40px; }
+  footer { padding: 24px 40px; }
+}
+</style>
+</head>
+<body>
+<header class="poster">
+  <div class="big" aria-hidden="true">[[The big thing: their logo in an img, or a shape from templates/shapes.html with --size set]]</div>
+  <h1>[[Name]]</h1>
+  <p>[[One line saying what this is, in their words]]</p>
+</header>
+<main class="bill">
+  <section><h2>[[Thing one]]</h2><p>[[One or two true sentences]]</p></section>
+  <section><h2>[[Why this]]</h2><p>[[Their reason, in their words]]</p></section>
+  <section><h2>[[What's next]]</h2><p>[[One true sentence]]</p></section>
+</main>
+<footer>Made with help from AI.</footer>
+</body>
+</html>
